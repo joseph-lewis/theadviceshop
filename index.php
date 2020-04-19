@@ -10,7 +10,6 @@
 <body>
 <?php include( "inc_header.php" );
 include( "inc_nav.php" );
-echo "<h2>Testing Echo</h2>"
 ?>
 <section id="content">
     <?php
