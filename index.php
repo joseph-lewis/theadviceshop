@@ -9,7 +9,9 @@
 
 <body>
 <?php include( "inc_header.php" );
-include( "inc_nav.php" ); ?>
+include( "inc_nav.php" );
+echo "<p>Testing Echo</p>"
+?>
 <section id="content">
     <h2>Welcome to The Advice Shop </h2>
 
