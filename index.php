@@ -24,7 +24,7 @@ include( "inc_nav.php" );
     $num = $_POST['num'];
 
     echo $num;
-    if(isset($_POST['$submit'])){
+    if(isset($_POST['submit'])) {
         $count = 0;
 
         echo"test2";
