@@ -43,6 +43,7 @@ include( "inc_nav.php" );
     if(isset($submit)){
         $count = 0;
         $num = $_POST['num'];
+        echo"test2";
         while($count <= $num){
             ++$count;
             echo $count;
