@@ -14,6 +14,7 @@ $name = substr($filename, 0, strrpos($filename, ".")); ?>
             echo "" .$dots;
             $dots .= ".";
             ++$count;
+            sleep(1);
         }
     }
     ?>
