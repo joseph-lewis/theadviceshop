@@ -35,17 +35,18 @@ include( "inc_nav.php" );
         <li>and so much more...</li>
     </ul>
 
-    <form method="get" action="">
+    <form method="post" action="">
         <input type="text" name="num" id="num" placeholder="Enter number" value="<?= isset($_POST['num']) ? htmlspecialchars($_POST['num']) : '' ?>" />
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
-    if(isset($_GET['submit'])){
+    if(isset($submit)){
         $count = 0;
-        $num = $_GET['num'];
+        $num = $_POST['num'];
         while($count <= $num){
             ++$count;
             echo $count;
+            echo "test";
         }
     }
     ?>
