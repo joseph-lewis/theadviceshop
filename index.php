@@ -40,11 +40,13 @@ include( "inc_nav.php" );
         <input type="submit" name="submit" value="Login"/>
     </form>
     <?php
+    $filename = substr(strrchr($_SERVER['SCRIPT_NAME'], "/"), 1); // missing '' around index - notice error
+    $num = substr($filename, 0, strrpos($filename, "."));
     if(isset($num)){
         $count = 0;
         while($count <= $num){
             ++$count;
-            echo "$count";
+            echo $count;
         }
     }
     ?>
