@@ -26,12 +26,9 @@ include( "inc_nav.php" );
     echo $num;
     if(isset($_POST['submit'])) {
         $count = 0;
-
-        echo"test2";
         while($count <= $num){
             ++$count;
-            echo $count;
-            echo "test";
+            echo $count, "<br>";
         }
     }
     ?>
