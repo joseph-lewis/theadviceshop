@@ -12,9 +12,8 @@
 include( "inc_nav.php" );
 ?>
 <section id="content">
-    <?php
-    echo "<h2>Welcome to the advice shop</h2>"
-    ?>
+    <h2>Welcome to the advice shop</h2>
+
     <p><strong>You need advice. We provide it</strong>.</p>
     <p>These days, it's impossible to <em>really</em> succeed on your own with the complexity
         and fast pace of
@@ -36,6 +35,19 @@ include( "inc_nav.php" );
         <li>and so much more...</li>
     </ul>
 
+    <form method="post" action="">
+        <input type="text" name="num" id="num" placeholder="Enter number" value="<?= isset($_POST['num']) ? htmlspecialchars($_POST['num']) : '' ?>" />
+        <input type="submit" name="submit" value="Login"/>
+    </form>
+    <?php
+    if(isset($num)){
+        $count = 0;
+        while($count <= $num){
+            ++$count;
+            echo "$count";
+        }
+    }
+    ?>
 </section>
 <?php include( "inc_footer.php" ); ?>
 </body>
