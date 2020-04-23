@@ -35,15 +35,14 @@ include( "inc_nav.php" );
         <li>and so much more...</li>
     </ul>
 
-    <form method="post" action="">
+    <form method="get" action="">
         <input type="text" name="num" id="num" placeholder="Enter number" value="<?= isset($_POST['num']) ? htmlspecialchars($_POST['num']) : '' ?>" />
-        <input type="submit" name="submit" value="Login"/>
+        <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
-    $filename = substr(strrchr($_SERVER['SCRIPT_NAME'], "/"), 1); // missing '' around index - notice error
-    $num = substr($filename, 0, strrpos($filename, "."));
-    if(isset($num)){
+    if(isset($_GET['submit'])){
         $count = 0;
+        $num = $_GET['num'];
         while($count <= $num){
             ++$count;
             echo $count;
