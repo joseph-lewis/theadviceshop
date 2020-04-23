@@ -15,6 +15,26 @@ include( "inc_nav.php" );
     <h2>Welcome to the advice shop</h2>
 
     <p><strong>You need advice. We provide it</strong>.</p>
+
+    <form method="post" action="">
+        <input type="text" name="num" id="num" placeholder="Enter number" />
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <?php
+    $num = $_POST['num'];
+
+    echo $num;
+    if(isset($_POST['$submit'])){
+        $count = 0;
+
+        echo"test2";
+        while($count <= $num){
+            ++$count;
+            echo $count;
+            echo "test";
+        }
+    }
+    ?>
     <p>These days, it's impossible to <em>really</em> succeed on your own with the complexity
         and fast pace of
         the modern world. Let us help you go beyond your current limits and experience the next level of success!</p>
@@ -35,22 +55,7 @@ include( "inc_nav.php" );
         <li>and so much more...</li>
     </ul>
 
-    <form method="post" action="">
-        <input type="text" name="num" id="num" placeholder="Enter number" />
-        <input type="submit" name="submit" value="Submit"/>
-    </form>
-    <?php
-    if(isset($_POST['$submit'])){
-        $count = 0;
-        $num = $_POST['num'];
-        echo"test2";
-        while($count <= $num){
-            ++$count;
-            echo $count;
-            echo "test";
-        }
-    }
-    ?>
+
 </section>
 <?php include( "inc_footer.php" ); ?>
 </body>
