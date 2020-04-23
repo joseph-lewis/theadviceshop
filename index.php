@@ -36,11 +36,11 @@ include( "inc_nav.php" );
     </ul>
 
     <form method="post" action="">
-        <input type="text" name="num" id="num" placeholder="Enter number" value="<?= isset($_POST['num']) ? htmlspecialchars($_POST['num']) : '' ?>" />
+        <input type="text" name="num" id="num" placeholder="Enter number" />
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <?php
-    if(isset($submit)){
+    if(isset($_POST['$submit'])){
         $count = 0;
         $num = $_POST['num'];
         echo"test2";
