@@ -8,14 +8,8 @@ $name = substr($filename, 0, strrpos($filename, ".")); ?>
     </form></aside>
     <?php
     if(isset($_POST['submit'])) {
-        $count = 0;
-        $dots = ".";
-        while ($count <= 4){
-            echo "" .$dots;
-            $dots .= ".";
-            ++$count;
-            sleep(1);
-        }
+        echo "Thanks for logging in";
+        header("Location:login.php?page=$name");
     }
     ?>
 
